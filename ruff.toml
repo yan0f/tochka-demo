@@ -1,0 +1,4 @@
+line-length = 120
+lint.select = ["E", "F", "I", "B", "Q", "W", "N", "S"]
+lint.flake8-quotes.inline-quotes = "single"
+format.quote-style = "single"
