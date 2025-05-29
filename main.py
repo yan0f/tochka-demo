@@ -12,13 +12,13 @@ RS_URL = 'https://enter.tochka.com/sandbox/v2'
 
 API_VERSION = 'v1.0'
 
-ACCOUNT_ID = '12345123451234512345/044525104'
+ACCOUNT_ID = '40817810802000000008/044525104'
 
-STATEMENT_ID = '3de271da-12a7-4d71-9c13-7878d87fb12f'
+STATEMENT_ID = '58fc2a85-73ff-4c0c-9a9f-ca359267c8e4'
 
 URL = f'{RS_URL}/open-banking/{API_VERSION}/accounts/{ACCOUNT_ID}/statements/{STATEMENT_ID}'
 
-TOKEN = 'working_token' # noqa: S105
+TOKEN = 'working_token'  # noqa: S105
 
 HEADERS = {
     'Authorization': f'Bearer {TOKEN}',
@@ -64,7 +64,7 @@ def parse_transactions(data: dict) -> list[dict]:
     return transactions
 
 
-def write_to_csv(transactions, filename: str) -> None:
+def write_to_csv(transactions: list[dict], filename: str) -> None:
     fieldnames = [
         'transaction_id',
         'amount',
